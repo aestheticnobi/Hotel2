@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Order</title>
+    <link href="/static/FAVICON.png" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/CSS/Style.css">
+
+</head>
+<body>
+<h1>Update Order</h1>
+<hr>
+<h3>Input the correct data</h3>
+
+<div>
+
+<form th:action="@{/order/order1}" method="post" th:object="${order}">
+    <label>ID</label><br>
+    <input type="roomNum" th:field="*{id}">
+    <br>
+    <label>First name</label><br>
+    <input type="text" th:field="*{fname}">
+<br>
+    <label>Lastname </label><br>
+    <input type="text" th:field="*{lname}">
+    <br>
+    <label>email</label><br>
+    <input type="text" th:field="*{email}">
+    <br>
+
+    <label>phone Number</label><br>
+    <input type="number" th:field="*{phonenum}">
+    <br>
+    <label>Room Number</label><br>
+    <input type="number" th:field="*{roomnum}">
+<br>
+    <input type="submit" name="submit">
+
+</form>
+
+</div>
+
+</body>
+</html>
